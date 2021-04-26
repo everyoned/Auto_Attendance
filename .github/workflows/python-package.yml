@@ -36,7 +36,10 @@ jobs:
           ljt_password: ${{ secrets.LJT_PASSWORD }}
           zsw_username: ${{ secrets.ZSW_USERNAME }}
           zsw_password: ${{ secrets.ZSW_PASSWORD }}
+          qqq_username: ${{ secrets.QQQ_USERNAME }}
+          qqq_password: ${{ secrets.QQQ_PASSWORD }}
         run: |
           python3 auto.py --username=$mxl_username --password=$mxl_password
           python3 auto.py --username=$ljt_username --password=$ljt_password
           python3 auto.py --username=$zsw_username --password=$zsw_password
+          python3 auto.py --username=$qqq_username --password=$qqq_password
