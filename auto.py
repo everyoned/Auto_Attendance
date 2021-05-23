@@ -42,7 +42,7 @@ class DaKa:
             login_data = {
                 "username": self.username,
                 "password": __login_passwd_aes(),
-                "captcha": login_form.find("input", id="captcha")['value'],
+                "captcha": '',
                 "rememberMe": login_form.find("input", id="rememberMe")['value'],
                 "_eventId": login_form.find("input", id="_eventId")['value'],
                 "cllt": login_form.find("input", id="cllt")['value'],
@@ -51,7 +51,7 @@ class DaKa:
                 "execution": login_form.find("input", id="execution")['value']
             }
             self.sess.post(self.login_url, data=login_data, allow_redirects=True)  # session中cookies单点登录相关的key改变
-        except:
+        except Exception as e:
             print("中南大学统一登录过程出错")
             exit(1)
 
