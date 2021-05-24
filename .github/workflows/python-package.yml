@@ -32,5 +32,14 @@ jobs:
         env:
           wz_username: ${{ secrets.WZ_USERNAME }}
           wz_password: ${{ secrets.WZ_PASSWORD }}
+          sht_username: ${{ secrets.SHT_USERNAME }}
+          sht_password: ${{ secrets.SHT_PASSWORD }}
+          hxj_username: ${{ secrets.HXJ_USERNAME }}
+          hxj_password: ${{ secrets.HXJ_PASSWORD }}
+          syx_username: ${{ secrets.SYX_USERNAME }}
+          syx_password: ${{ secrets.SYX_PASSWORD }}
         run: |
           python3 auto.py --username=$wz_username --password=$wz_password
+          python3 auto.py --username=$sht_username --password=$sht_password
+          python3 auto.py --username=$syx_username --password=$syx_password
+          python3 auto.py --username=$hxj_username --password=$hxj_password
